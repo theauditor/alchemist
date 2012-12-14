@@ -1,5 +1,5 @@
 <html>
     <head>
-        <title>Alchemist Event Registrar</title>
+        <title>Alchemist Iventegator</title>
     </head>
 </html>
