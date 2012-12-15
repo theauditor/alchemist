@@ -117,6 +117,8 @@ height: 100%;
                         echo ",";
                     $nm--;
                 }
+                mysql_free_result($ans);
+                mysql_close();
                 ?>
             ]
         });
