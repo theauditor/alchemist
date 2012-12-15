@@ -20,11 +20,25 @@
     <a class="btn btn-link" onclick="bak()"><-- Back</a>
     <div>
         <script>
-        var $k1x;
-        var $k2x;
-        var $k3x;
+        
         function subKey(){
-            
+            $k1x = $("#k1").val();
+            $k2x = $("#k2").val();
+            $k3x = $("#k3").val();
+            $("#bt1").html("<img src='pic/ld.gif'/>");
+            jQuery.get("keycheck.php",{k1: $k1x, k2: $k2x , k3: $k3x},function(data){
+                if(data==1)
+                    {
+                        
+                    }else {
+                        $("#alt").html(data);
+                        $("#alt").animate(
+                        {
+                          opacity:0.99
+                        },1000);
+                        $("#bt1").html("<button class=\"btn btn-inverse\" onclick=\"subKey()\">Register</button>");
+                    }
+            });
         }
     
         </script>
@@ -35,9 +49,9 @@
         <input type="text" id="k1" maxlength="5" class="kb" onkeyup="k10()" placeholder="00000" />-
         <input type="text" id="k2" maxlength="5" class="kb" onkeyup="k20()" placeholder="00000"/>-
         <input type="text" id="k3" maxlength="5" class="kb" placeholder="00000"/>
-        <div id="alt" style="height:0px;width:0px;overflow: hidden">
+        <div id="alt" style="opacity:0.00;height:20px">
         </div>
-        <div id="bt1">
+        <div id="bt1" style="padding-top:5px">
             <button class="btn btn-inverse" onclick="subKey()">Register</button>
         </div> 
     </div>

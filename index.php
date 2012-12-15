@@ -33,8 +33,8 @@ height: 100%;
     
     }
     .log1{
-        height: 500px;
-        width:500px;
+        height: 100%;
+        width:100%px;
     }
    
     
@@ -44,7 +44,9 @@ height: 100%;
     var $hold ;
     var $z;
     var $flg0;
-    
+    var $k1x;
+    var $k2x;
+     var $k3x;
    $(function(){
           
          $("#inputSchool").change(function(){
