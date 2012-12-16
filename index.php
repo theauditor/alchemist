@@ -57,7 +57,7 @@ height: 100%;
                     $("#logo").html(data);
                 });
                 
-                $( ".log0" ).switchClass( "log0", "log1", 3000 );    
+                $( ".log0" ).switchClass( "log0", "log1", 1000 );    
                 
         });
        

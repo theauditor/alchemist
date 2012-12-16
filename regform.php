@@ -20,8 +20,12 @@
     <a class="btn btn-link" onclick="bak()"><-- Back</a>
     <div>
         <script>
+        $(function(){
+            
         
-        function subKey(){
+        $("#bt").click(function(){
+            
+            
             $k1x = $("#k1").val();
             $k2x = $("#k2").val();
             $k3x = $("#k3").val();
@@ -29,7 +33,9 @@
             jQuery.get("keycheck.php",{k1: $k1x, k2: $k2x , k3: $k3x},function(data){
                 if(data==1)
                     {
-                        
+                       jQuery.get("signup.php",function(data){
+                           $("#Base").html(data);
+                       }) 
                     }else {
                         $("#alt").html(data);
                         $("#alt").animate(
@@ -39,8 +45,8 @@
                         $("#bt1").html("<button class=\"btn btn-inverse\" onclick=\"subKey()\">Register</button>");
                     }
             });
-        }
-    
+        });
+    });
         </script>
         
         <div class="hd">
@@ -52,10 +58,10 @@
         <div id="alt" style="opacity:0.00;height:20px">
         </div>
         <div id="bt1" style="padding-top:5px">
-            <button class="btn btn-inverse" onclick="subKey()">Register</button>
+            <button class="btn btn-inverse" type="button" id="bt">Register</button>
         </div> 
     </div>
-        <div class="ui-state-info">
+        <div class="ui-state-highlight">
         <span class="ui-icon ui-icon-info" style="float:left;margin-left: 3px;"></span>
         <b>Note: </b> Use the key number provided to you from your school,you can only register once with
         a giving key number. If system rejects the key number please contact your school for a new one.</div> 
