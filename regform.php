@@ -51,7 +51,7 @@
         
         <div class="hd">
             <h5>Enter Key Number</h5>
-            <form></form>
+            <form action="#">
         <input type="text" id="k1" maxlength="5" class="kb" onkeyup="k10()" placeholder="00000" />-
         <input type="text" id="k2" maxlength="5" class="kb" onkeyup="k20()" placeholder="00000"/>-
         <input type="text" id="k3" maxlength="5" class="kb" placeholder="00000"/>
@@ -59,7 +59,8 @@
         </div>
         <div id="bt1" style="padding-top:5px">
             <button class="btn btn-inverse" type="button" id="bt">Register</button>
-        </div> 
+        </div>
+        </form>
     </div>
         <div class="ui-state-highlight">
         <span class="ui-icon ui-icon-info" style="float:left;margin-left: 3px;"></span>

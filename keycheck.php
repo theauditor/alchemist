@@ -44,7 +44,7 @@ AND Al_schools.sid = Al_events.sid;";
  
  if($vals['days']<0)
  {
-     if($vals['stat']==-1)
+     if($vals['days']==-1)
      {
          die( "<div class=\"ui-state-error\">
         <span class=\"ui-icon ui-icon-alert\" style=\"float:left;margin-left: 3px;\"></span>
@@ -58,7 +58,7 @@ AND Al_schools.sid = Al_events.sid;";
      }
  }
  
- if($vals['stat']==-1)
+ if($vals['stat']==1)
  {
       die( "<div class=\"ui-state-error\">
         <span class=\"ui-icon ui-icon-alert\" style=\"float:left;margin-left: 3px;\"></span>

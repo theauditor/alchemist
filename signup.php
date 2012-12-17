@@ -184,7 +184,7 @@ $("#rn").change(function(){
             them once you have registered.</b>
         </div>
         <div>
-            <form>
+            <form action="#">
                  <fieldset>
                 <div class="boxee">
                     <div class="ui-state-highlight">
