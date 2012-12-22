@@ -3,9 +3,9 @@
         <title>Alchemist | Administrator</title>
     </head>
     <?php 
-    include_once 'config.php';
+
     include_once 'libadd.php'; 
-    include_once 'inc.php';
+    
     ?>
    <style>
         html,
@@ -77,7 +77,7 @@ height: 100%;
                         </div>
                         </div>
                         <div>
-                            <button type="button" class="btn btn-inverse" id="in">Login</button>
+                            <a type="button"  class="btn btn-inverse" id="in">Login</a>
                         </div>
                     </fieldset>
                 </form>

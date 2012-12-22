@@ -34,8 +34,8 @@ if($xi==$res['phash'])
     $_SESSION['id'] = md5(session_id());
     $_SESSION['cid']= rand(10000, 200000);
     $_SESSION['flg']="A";
-    setcookie("id", $_SESSION['id'],60*60*2);
-    setcookie("cid",$_SESSION['cid'],60*60*2);
+    setcookie("id", $_SESSION['id'],time()+60*60*2);
+    setcookie("cid",$_SESSION['cid'],time()+60*60*2);
     die("1");
 }  else {
 die("0");    
