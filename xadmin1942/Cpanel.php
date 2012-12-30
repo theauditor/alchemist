@@ -158,7 +158,9 @@ $("#acc").accordion();
                         while($datx = mysql_fetch_array($ans))
                         {
                             echo "<h3>".$datx['nam']."</h3>";
-                            echo "<div id=\"".$datx['id']."box\"> .. </div>";
+                            echo "<div id=\"".$datx['id']."box\">";
+                                    
+                            echo"</div>";
                                     
                         }
                     }
