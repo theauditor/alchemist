@@ -37,11 +37,12 @@ $("#acc").accordion();
                 
             $("#AddB").click(function(){
                 $cn =    $("#cnamI").val();
-                $sc = $("#clsI1").val();
-                $ec = $("#clsI2").val();
+                $sc = $("#cls1I").val();
+                $ec = $("#cls2I").val();
                 $ic1 = $("#In1").val();
                 $ic2 = $("#In2").val();
                 
+                alert($sc+" "+$ec);
                 jQuery.get("ccat.php",{n: $cn, sc: $sc, ec: $ec, i1:$ic1,i2: $ic2}, function(data){
                     $("#hider2").animate({opacity:0,height:0}, 1000);
                     $("#hider").animate({opacity:0,height:0}, 1000);
@@ -159,8 +160,11 @@ $("#acc").accordion();
                         {
                             echo "<h3>".$datx['nam']."</h3>";
                             echo "<div id=\"".$datx['id']."box\">";
+                                    echo "<button onclick='edcat(".$datx['id'].")' class='btn btn-min btn-warning ' >Edit</button> &nbsp;";
+                                    echo "<button onclick='delcat(".$datx['id'].")' class='btn btn-min btn-danger ' >Edit</button>";
+echo "<legend>helooo</legend>";
                                     
-                            echo"</div>";
+                                    echo"</div>";
                                     
                         }
                     }
